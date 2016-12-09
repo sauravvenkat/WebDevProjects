@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="style1.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <!--If no path exists then just -->
+
+    
+    <body>
+    <h1>Raw Bikram Yogi</h1>
+    <div id="whole-menu">
+        <div id="menu">
+            <button class='dropbtn' >Tools</button>
+                <div class = 'links'>
+                    <a href="#">Link1</a>
+                    <a href="#">Link2</a>
+                    <a href="#">Link3</a>
+                </div>
+        </div>
+        <div id="menu2">
+            <button class="dropbtn2">DropDown2</button>
+                <div class="links2">
+                    <a href="#">Link4</a>
+                    <a href="#">Link5</a>
+                    <a href="#">Link6</a>
+                </div>
+        </div>
+        <div id="menu3">
+        <button class="dropbtn3">DropDown3</button>
+                <div class="links3">
+                    <a href="#">Link7</a>
+                    <a href="#">Link8</a>
+                    <a href="#">Link9</a>
+                </div>
+        
+        </div>
+    </div>
+    </body>
+    <style>
+        
+        body{
+            background-color: #3399FF;
+        }
+        
+        body h1{
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .links a{
+            text-decoration: none;
+            position:relative;
+            display: none;
+            font-family: sans-serif;
+            color: dodgerblue;
+            background-color: dimgray;
+            padding: 20px;
+            width: 110px;
+            
+        }
+        .links a:hover{
+            background-color:#33322C;
+        }
+        
+        
+        #menu .dropbtn{
+            
+            background-color: dimgray;
+            color: dodgerblue;
+            font-family: sans-serif;
+            font-size: 18px;
+            width: 150px;
+            border-color: dodgerblue;
+        }
+        
+        
+        
+        #menu .dropbtn:hover{
+            background-color:#33322C ;
+            border-color: purple;
+            color: white;
+            display: block;
+            
+        }
+        
+        
+        
+        
+        #menu:hover .links a{
+            display: block
+        }
+        
+        #menu2 .dropbtn2{
+            
+            background-color: dimgray;
+            color: dodgerblue;
+            font-family: sans-serif;
+            font-size: 18px;
+            width: 150px;
+            border-color: dodgerblue;
+            position: absolute;
+            left: 157px;
+            top: 83px;
+        }
+        
+        #menu2 .dropbtn2:hover{
+            background-color: red;
+            border-color: dodgerblue;
+            color: black;
+            display: block;
+        }
+        
+        .links2 a{
+            text-decoration: none;
+            position:relative;
+            display: none;
+            font-family: sans-serif;
+            color: white;
+            background-color: blueviolet;
+            padding: 20px;
+            width: 110px;
+            position: relative;
+            left: 150px;
+        }
+        
+        .links2 a:hover{
+            background-color: red;
+        }
+        
+        #menu2:hover .links2 a{
+            display: block;
+        }
+#menu3 .dropbtn3{
+            
+            background-color: blueviolet;
+            color: white;
+            font-family: sans-serif;
+            font-size: 18px;
+            width: 150px;
+            border-color: red;
+            position: absolute;
+            left: 306px;
+            top: 83px;
+        }
+        
+        #menu3 .dropbtn3:hover{
+            background-color: red;
+            border-color: purple;
+            color: black;
+            display: block;
+        }
+        
+        .links3 a{
+            text-decoration: none;
+            position:relative;
+            display: none;
+            font-family: sans-serif;
+            color: white;
+            background-color: blueviolet;
+            padding: 20px;
+            width: 110px;
+            position: relative;
+            left: 300px;
+        }
+        
+        .links3 a:hover{
+            background-color: red;
+        }
+        
+        #menu3:hover .links3 a{
+            display: block;
+        }
+        
+        
+    
+    </style>
+</html>

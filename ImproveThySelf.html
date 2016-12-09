@@ -1,0 +1,82 @@
+<html>
+<head>
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Montserrat|Viga" rel="stylesheet">
+
+</head>
+
+<body>
+    <script>
+    var dataSet = function(){
+        arr = []
+        for(i=5; i < 105; i = i+5){
+            arr.push(i)
+        }
+        return arr
+    };
+    
+    var domainMax = Math.max.apply(Math,[10, 20, 40, 20, 10,20, 40, 20, 10 ]) ;
+    
+    var color =d3.scale.linear()
+        .domain([0, domainMax])
+        .range(['red', 'purple']);
+        
+    d3.select("body").selectAll("div")
+        .data([ 10, 15, 25, 15, 10,15, 25, 15, 10])
+        .enter()
+        .append("div")
+        .attr("class", "bar")
+        .style('height', function(d){
+        var barHeight = d * 5; //Scale up by factor of 5
+        return barHeight.toString() + "px"})
+        .style('top', function(d){
+        if (d == 10 || d == 15 ){
+            return '0px'
+        }
+
+        else {
+            return '20px'
+        }
+        
+    });
+//        .style('background-color',function(d){return color(d) });
+        
+    </script>
+    <div class="bar">
+    </div>
+    <h1>CISCO</h1>
+</body>
+
+<style>
+    div.bar{
+        display: inline-block;
+        width: 20px;
+/*        height: 75px;  We'll override height later */
+        background-color: #1B4175;
+        margin-right: 30px;
+        border-radius: 10px;
+        position: relative;
+        top: 10px;
+        left: 50px;
+    }
+    div.bar:hover{
+        background-color: red;
+        
+    }
+    h1{
+        font-family: 'Viga', sans-serif;
+        font-size: 120px;
+        color: #E32F4D;
+        position:absolute;
+        left: 96px;
+    }
+
+</style>
+
+
+
+
+</html>

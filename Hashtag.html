@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Fjalla+One" rel="stylesheet">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+<img id="tube" src="Underground-logo.png">
+<!--<img style="-webkit-user-select: none; cursor: zoom-in;" src="https://tflnwp.files.wordpress.com/2016/08/tubeheartbeat-3.gif" width="682" height="682">-->
+<!--<div style="width:260px"><script language="JavaScript" src="https://www.tfl.gov.uk/tfl/syndication/widgets/serviceboard/embeddable/serviceboard-iframe-stretchy.js"></script></div>-->
+<button id="Submit">Submit</button>
+    
+</body>
+    
+<script>
+ $(document).ready(function(){
+     $('#tube').hide("slide",{direction: 'up', distance: 500}, 1000)
+     $('#Submit').delay(1000).fadeIn(1000);
+ 
+ 
+ 
+ });
+    
+    
+
+</script>    
+
+<style>
+    #tube{
+        width: 30%;
+        height: 35%;
+        position: absolute;
+        top: 5%;
+        display: none;
+    }
+    #Submit{
+        position: absolute;
+        bottom: 90px;
+        display: none;
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 150%;
+        padding: 1.5%;
+        color: white;
+        background: linear-gradient(to bottom right, red, #cc0052);
+        border-color: black;
+    }
+
+</style>

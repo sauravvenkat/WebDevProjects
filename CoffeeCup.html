@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <title>Coffee Cup</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="CoffeeCup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Damion|Just+Another+Hand|Sofia" rel="stylesheet">
+</head>
+    
+<body>
+    
+    <h1 id="coffee-machine">Coffee Machine</h1>
+    <div id="menu">
+        <h1 id="pick">Pick Your Flavor</h1>
+        <button id="cappucino" onclick="fill_cap()">Cappucino</button>
+        <button id="darkRoast" onclick='fill_dark()'>Dark Roast</button>
+        <button id="pumpkin" onclick="fill_pumpkin()">Pumpkin Spice Latte</button>
+        <button id="redVelvet" onclick="fill_velvet()">Red Velvet Latte</button>
+    </div>
+    <button id='empty' onclick="empty_cup()">Drink Coffee!</button>
+    
+    <script>
+        
+        
+        var canvas = d3.select('body')
+            .append('svg')
+            .attr('width', 1000)
+            .attr('height', 1024);
+        
+        canvas.append("path")          // attach a path
+            .style("stroke", "white")  // colour the line
+            .style("fill", "black")     // remove any fill colour
+            .attr("d", "M 200,200, L 250,650, L 600,650, L 650,200 Z"); // path commands 
+        
+
+        
+        function fill_cap() {
+        
+        
+        
+        var cap = canvas.append('path')
+            .style('stroke', 'white')
+            .style('fill', '#bf8040')
+            .attr('d', 'M 250,650, L 249,641, L 601,641 , L 600,650 Z');
+        
+        
+        cap.transition()
+            .duration(1000)
+            .style('stroke', 'white')
+            .style('fill', '#bf8040')
+            .attr('d', 'M 200,200, L 250,650, L 600,650 , L 650,200 Z')
+                
+        
+        };
+        
+        function fill_dark(){
+        var cap = canvas.append('path')
+            .style('stroke', 'white')
+            .style('fill', '#261a0d')
+            .attr('d', 'M 250,650, L 249,641, L 601,641 , L 600,650 Z');
+        
+        
+        cap.transition()
+            .duration(1000)
+            .style('stroke', 'white')
+            .style('fill', '#261a0d')
+            .attr('d', 'M 200,200, L 250,650, L 600,650 , L 650,200 Z')
+            
+        }
+        
+        function empty_cup(){
+            var cap = canvas.append('path')
+            .style('stroke', 'white')
+            .style('fill', '#black')
+            .attr('d', 'M 200,200, L 201,209, L 649,209 , L 650,200 Z');
+            
+            cap.transition()
+                .duration(1000)
+                .style('stroke', 'white')
+                .style('fill', 'black')
+                .attr('d', 'M 200,200, L 250,650, L 600,650 , L 650,200 Z')
+            
+            
+            
+            
+            
+        }
+        
+        function fill_pumpkin(){
+        var cap = canvas.append('path')
+            .style('stroke', 'white')
+            .style('fill', '#cc7a00')
+            .attr('d', 'M 250,650, L 249,641, L 601,641 , L 600,650 Z');
+        
+        cap.transition()
+            .duration(1000)
+            .style('stroke', 'white')
+            .style('fill', '#cc7a00')
+            .attr('d', 'M 200,200, L 250,650, L 600,650 , L 650,200 Z')
+        
+        }
+        function fill_velvet(){
+            var cap = canvas.append('path')
+            .style('stroke', 'white')
+            .style('fill', 'rgb(130,23,43)')
+            .attr('d', 'M 250,650, L 249,641, L 601,641 , L 600,650 Z');
+        
+        cap.transition()
+            .duration(1000)
+            .style('stroke', 'white')
+            .style('fill', 'rgb(130,23,43)')
+            .attr('d', 'M 200,200, L 250,650, L 600,650 , L 650,200 Z')
+            
+        }
+        
+    
+    </script>
+    
+    
+    
+</body>
+    
+    <style>
+        #menu{
+            display: none;
+        }
+        
+        #empty{
+            font-family: 'Just Another Hand', cursive;
+            display: none;
+            border-color:#86592d;
+            color: #86592d;
+            font-size: 36px;
+            position:absolute;
+            right: 60px;
+            border-radius: 10px;
+            background-color: #d2a679;
+            top: 275px;
+            width: 200px;
+        }
+        
+        #darkRoast{
+            font-family: 'Just Another Hand', cursive;
+            border-color:#86592d;
+            color: #86592d;
+            font-size: 36px;
+            position:absolute;
+            right: 60px;
+            border-radius: 10px;
+            background-color: #d2a679;
+            top: 275px;
+            width: 200px;
+        }
+        
+        #pumpkin{
+            font-family: 'Just Another Hand', cursive;
+            border-color:#86592d;
+            color: #86592d;
+            font-size: 36px;
+            position:absolute;
+            right: 60px;
+            border-radius: 10px;
+            background-color: #d2a679;
+            top: 350px;
+            width: 200px;
+            
+        }
+        
+        #redVelvet{
+            font-family: 'Just Another Hand', cursive;
+            border-color:#86592d;
+            color: #86592d;
+            font-size: 36px;
+            position:absolute;
+            right: 60px;
+            border-radius: 10px;
+            background-color: #d2a679;
+            top: 425px;
+            width: 200px;
+        }
+        #redVelvet:hover{
+            color: white;
+            background-color: rgb(130,23,43);
+            border-color: black;
+        }
+        
+        #pick{
+            font-family: 'Damion', cursive;
+            color: #86592d;
+            font-size: 36px;
+            position: absolute;
+            right: 50px;
+            top: 100px
+        }
+        
+        #coffee-machine{
+            font-family: 'Sofia', cursive;
+            color: #86592d;
+            font-size: 50px;
+            position: absolute;
+        }
+        
+        #cappucino{
+            
+            font-family: 'Just Another Hand', cursive;
+            border-color:#86592d;
+            color: #86592d;
+            font-size: 36px;
+            position:absolute;
+            right: 60px;
+            border-radius: 10px;
+            width: 200px;
+            background-color: #d2a679;
+            top: 200px;
+            
+        }
+        
+        
+    
+        
+        #cappucino:hover{
+            background-color: #bf8040;
+            color: black;
+            border-color: black;
+        }
+        
+        #darkRoast:hover{
+            background-color: #261a0d;
+            color: azure;
+            border-color: black;
+            
+        
+        }
+        #pumpkin:hover{
+            background-color: #cc7a00;
+            color: black;
+        }
+        
+        
+
+        body{
+            
+            background-color: black;
+            border-color: black;
+        }
+        
+        #percent{
+            
+            font-size: 54px;
+            position: absolute;
+            font-family: Arial;
+            left: 380px;
+            top: 380px;
+            color: white;
+        }
+    
+    </style>
+
+
+
+</html>

@@ -1,0 +1,308 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Fjalla+One" rel="stylesheet">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <title>Green Me Up</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Baloo+Da|Shadows+Into+Light" rel="stylesheet">
+</head>
+<body>
+    <h1 class="display-1" id="title">Green Me Up</h1>
+    <p id="caption">Celebrating the love of Green Vegetables</p>
+    <button id="greenup">Love Me Some Green</button>
+<div id="page2">
+    <h1 id="title2">Green Me Up</h1>
+    <p id="caption2">Celebrating the love of Green Vegetables</p>
+    
+<div class="btn-group btn-group-justified" role="group" aria-label="..." id="menu" >
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="veggies">Veggies</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" id="recipes">Recipes</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" id="about">About</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" id="contact">Contact</button>
+  </div>
+</div>
+</div>
+
+<img id="asparagus" src="Asparagus.png">
+<img id="broccoli" src="Broccoli.png">
+<img id="celery" src="Celery.jpg">
+<img id="cabbage" src="Chinese%20Cabbage.jpg">
+<img id="kale" src="Kale.jpg">
+<img id="spinach" src="Spinach.jpg">
+
+    
+</body>
+
+<style>
+    #asparagus{
+        position: absolute;
+        top: 83%;
+        left: 10%;
+        width: 10%;
+        display: none;
+        
+    }
+    #asparagus:hover{
+        width: 11%;
+    }
+    #broccoli{
+        position:absolute;
+        top: 84%;
+        left: 40%;
+        width: 16%;
+        display: none;
+    }
+    #broccoli:hover{
+        width: 20%;
+    }
+    #kale{
+        position: absolute;
+        top: 89%;
+        right: 7%;
+        width: 24%;
+        display: none;
+    }
+    #kale:hover{
+        width: 28%;
+    }
+    #cabbage{
+        position: absolute;
+        top: 42%;
+        right: 6%;
+        width: 20%;
+        display: none;
+    }
+    #cabbage:hover{
+        width: 25%;
+    }
+    #celery{
+        position: absolute;
+        left: 10%;
+        width: 21%;
+        display: none;
+    }
+    #celery:hover{
+        width: 24%;
+    }
+    #spinach{
+        position: absolute;
+        top: 43%;
+        left: 43%;
+        display: none;
+        width: 17%;
+    }
+
+    #spinach:hover{
+        width: 19%;
+    }
+    #celery{
+        position: absolute;
+        top: 37%;
+        display: none;
+    }
+    #caption2{
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        font-size: 300%;
+        position: absolute;
+        left: 1%;
+        top: 15%;
+        display: none;
+    }
+    #menu{
+        display: none;
+        position: absolute;
+        top: 24%;
+    }
+    #menu:active{
+        background-color: rgb(0, 146, 69);
+        color: white;
+        font-size: 300%;
+    }
+    #veggies{
+        background-color: white;
+        color: rgb(0, 146, 69);
+        font-size: 200%;
+    }
+    #veggies:hover{
+        background-color: rgb(0, 146, 69);
+        color: white;
+        font-size: 300%;
+    }
+    #recipes{
+        background-color: white;
+        color: rgb(0, 146, 69);
+        font-size: 200%;
+    }
+    #recipes:hover{
+        background-color: rgb(0, 146, 69);
+        color: white;
+        font-size: 300%;
+    }
+    #about{
+        background-color: white;
+        color: rgb(0, 146, 69);
+        font-size: 200%;
+    }
+    #about:hover{
+        background-color: rgb(0, 146, 69);
+        color: white;
+        font-size: 300%;
+    }
+    #contact{
+        background-color: white;
+        color: rgb(0, 146, 69);
+        font-size: 200%;
+    }
+    #contact:hover{
+        background-color: rgb(0, 146, 69);
+        color: white;
+        font-size: 300%;
+    }
+    #menu{
+        font-family: 'Amatic SC', cursive;
+    }
+
+    .jumbotron{
+        background-color: rgb(0, 146, 69);
+    }
+    body{
+        background-color: rgb(0, 146, 69);
+    }
+    #greenup{
+        font-family: 'Amatic SC', cursive;
+        padding: 1%;
+        font-size: 250%;
+        border-radius: 20px;
+        position: absolute;
+        right: 42%;
+        top: 47%;
+        border-color: white;
+        color: white;
+        background-color: rgb(0, 146, 69);
+        display:none;
+        
+        
+    }
+    #greenup:hover{
+        color: rgb(0, 146, 69);
+        border-color: #33cc33;
+        background-color: white;
+    }
+    #title2{
+        color: white;
+        font-family: 'Baloo Da', cursive;
+        font-size: 550%;
+        position: absolute;
+        top: 1.5%;
+        left: 1%;
+        display: none;
+        width: 50%;
+    }
+    
+    #title{
+        color: white;
+        font-family: 'Baloo Da', cursive;
+        font-size: 600%;
+        position: absolute;
+        right: 30%;
+        top: 19%;
+        display:none;
+        
+    }
+    #caption{
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        font-size: 300%;
+        position: absolute;
+        right: 31.5%;
+        top: 35%;
+        display: none;
+    }
+    @media only screen and (max-device-width : 360px){
+        
+        #title{
+            position:absolute;
+            color: white;
+            font-family: 'Baloo Da', cursive;
+            font-size: 600%;
+            right: 26%;
+        }
+        #caption{
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            font-size: 300%;
+            position: absolute;
+            right: 28%;
+            top: 26%;
+            display: none;
+        }
+        #greenup{
+            position: absolute;
+            right: 42%;
+            top: 31%;
+        }
+
+    }
+    @media only screen and (max-device-width: 412px){
+        #title{
+            position:absolute;
+            color: white;
+            font-family: 'Baloo Da', cursive;
+            font-size: 600%;
+            right: 25%;
+        }
+        
+        #caption{
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            font-size: 300%;
+            position: absolute;
+            right: 27%;
+            top: 26%;
+            display: none;
+        }
+        #greenup{
+            position: absolute;
+            right: 39.5%;
+            top: 31%;
+        }
+    }
+    
+</style>    
+
+<script>
+    $(document).ready(function(){
+        $('#title').fadeIn(1500);
+        $('#caption').delay(1000).fadeIn(1000);
+        $('#greenup').delay(1500).fadeIn(1000);
+        $('#greenup').click(function(){
+            $('#title').hide("slide",{direction: 'up', distance: 250}, 1000);
+            $('#caption').hide("slide",{direction: 'up', distance: 300}, 1000);
+            $(this).hide("slide",{direction: 'up', distance: 350}, 1000);
+            $('#title2').delay(1000).fadeIn(1000);
+            $('#caption2').delay(2000).fadeIn(1000);
+            $('#menu').delay(3000).fadeIn(1000);
+            $('#celery').delay(4000).fadeIn(1000);
+            $('#spinach').delay(5000).fadeIn(1000);
+            $('#cabbage').delay(6000).fadeIn(1000);
+            $('#asparagus').delay(7000).fadeIn(1000);
+            $('#broccoli').delay(8000).fadeIn(1000);
+            $('#kale').delay(9000).fadeIn(1000);
+            
+        });
+    });
+    
+    
+    
+</script>    
+    
+</html>

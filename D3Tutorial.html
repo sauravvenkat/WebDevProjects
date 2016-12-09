@@ -1,0 +1,73 @@
+<html>
+<head>
+    
+    <title>D3 Tutorial</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    
+</head>
+
+
+<body>
+    <script>
+    
+//This is how to draw SVG Images
+//        var canvas = d3.select("body").append("svg").attr('height', 500).attr('width', 500).append('g')
+//            .attr('transform', 'translate(20, 0)');
+//        
+//        var circle = canvas.append('circle').attr('cx', 250).attr('cy', 250).attr('r', 50).attr('fill', 'red');
+//        
+//        var rectangle = canvas.append('rect').attr('width', 100).attr('height', 50).attr('fill','black');
+//        
+//        var line = canvas.append('line')
+//            .attr('x1', 0)
+//            .attr('y1', 500)
+//            .attr('x2', 500)
+//            .attr('y2', 0)
+//            .attr('stroke', 'green')
+//            .attr('stroke-width', 5);
+        
+//Create and color bars going left of a page
+        function createArr(){
+            arr = []
+            for (i = 100; i<500; i = i + 100){
+                arr.push(i)
+            }
+            return arr
+        };
+        
+        var dataArray = createArr();
+        var domainMax = Math.max.apply(Math, dataArray);
+        var width = 500;
+        var height = 500;
+        
+        var widthScale = d3.scale.linear().domain([0, domainMax]).range([0, width]);
+        
+        var axis = d3.svg.axis().ticks(10).scale(widthScale);
+        
+        
+        var canvas = d3.select("body").append("svg").attr('height', 500).attr('width', 500).append('g')
+            .attr('transform', 'translate(20, 0)');
+        
+        
+        
+        var color = d3.scale.linear()
+            .domain([0, domainMax])
+            .range(['blue', 'red']);
+        
+        var bars = canvas.selectAll('rect').data(dataArray).enter().append('rect').attr('width', function(d) {return widthScale(d) })
+            .attr('height', 50)
+            .attr('y', function(d, i) {return i*100})
+            .attr('fill', function(d){return color(d) });
+        
+        canvas.append('g').attr('transform', 'translate(0, 350)').call(axis);
+    
+    </script>
+    
+
+
+
+</body>    
+
+
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Fjalla+One" rel="stylesheet">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <p id="head">Inside<span class="the">The</span>Mind</p>
+    </div>
+    <div id="quote">
+    
+        <p>"I do not know what I may appear to the world; but to myself I seem to have been only like a boy playing on the seashore...whilst the great ocean of truth lay all undiscovered before me." - <span id="Newton">Sir Isaac Newton</span> </p>
+    
+    </div>
+    <button id="enter">Enter the Mind</button>
+    <div id="menu">
+        <button id="connect">Connect</button>
+        <button id="Books">Book Reviews</button>
+        <button id="About">About Me</button>
+        <button id="Blog">Blog</button>
+    </div>    
+    <p id="about-me">About Me</p>
+    <p id="description">My name is Saurav Venkatataramu and I am currently a student at the University of Texas at Austin studying Mathematics. This is my site under construction.</p>
+    <p id="connectw">Connect With Me</p>
+    <p id="blog">My Random Ideas</p>
+    <p id="books">My Reads</p>
+    
+    
+    
+    
+        
+</body>
+    <style>
+        body{
+            background-color: #DCDCDC;
+        }
+        #About{
+            font-family: 'Raleway', sans-serif;
+            border-color: red;
+            font-size: 120%;
+            width: 15%;
+            background-color: white;
+            color: red;
+            position: relative;
+            display: none;
+            left: 25%;
+        }
+        #Books{
+            font-family: 'Raleway', sans-serif;
+            border-color: red;
+            font-size: 120%;
+            width: 15%;
+            background-color: white;
+            color: red;
+            position: relative;
+            display: none;
+            left: 14%;
+        }
+        
+        #Blog{
+            font-family: 'Raleway', sans-serif;
+            border-color: red;
+            font-size: 120%;
+            width: 15%;
+            background-color: white;
+            color: red;
+            position: relative;
+            display: none;
+            left: 36%;
+        }
+        #About:hover{
+            color:white;
+            background-color: red;
+            border-color: black;
+            -webkit-transition: background-color 0.7s ease;
+            -moz-transition: background-color 0.7s ease;
+            -o-transition: background-color 0.7s ease;
+            transition: background-color 0.7s ease;
+            -webkit-transition: color 0.3s ease;
+            -moz-transition: color 0.3s ease;
+            -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            -webkit-transition: border-color 0.7s ease;
+            -moz-transition: border-color 0.7s ease;
+            -o-transition: border-color 0.7s ease;
+            transition: border-color 0.7s ease;
+        }
+        #Blog:hover{
+            color:white;
+            background-color: red;
+            border-color: black;
+            -webkit-transition: background-color 0.7s ease;
+            -moz-transition: background-color 0.7s ease;
+            -o-transition: background-color 0.7s ease;
+            transition: background-color 0.7s ease;
+            -webkit-transition: color 0.3s ease;
+            -moz-transition: color 0.3s ease;
+            -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            -webkit-transition: border-color 0.7s ease;
+            -moz-transition: border-color 0.7s ease;
+            -o-transition: border-color 0.7s ease;
+            transition: border-color 0.7s ease;
+        }
+        
+        #connectw{
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 300%;
+            display: none;
+            text-align: center;
+        }
+        #blog{
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 300%;
+            display: none;
+            text-align: center;
+        }
+        
+        #connect{
+            font-family: 'Raleway', sans-serif;
+            border-color: red;
+            font-size: 120%;
+            width: 15%;
+            background-color: white;
+            color: red;
+            display: none;
+            position: relative;
+            left: 3%;
+        }
+        #connect:hover{
+            color:white;
+            background-color: red;
+            border-color: black;
+            -webkit-transition: background-color 0.7s ease;
+            -moz-transition: background-color 0.7s ease;
+            -o-transition: background-color 0.7s ease;
+            transition: background-color 0.7s ease;
+            -webkit-transition: color 0.3s ease;
+            -moz-transition: color 0.3s ease;
+            -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            -webkit-transition: border-color 0.7s ease;
+            -moz-transition: border-color 0.7s ease;
+            -o-transition: border-color 0.7s ease;
+            transition: border-color 0.7s ease;
+        }
+        
+        #head{
+            width: 100%;
+            height: 100%;
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 400%;
+            padding-left: 3%;
+        }
+        
+        .the{
+            color: red;
+        }
+        
+        #description{
+            font-family: 'Fjalla One', sans-serif;
+            text-align: center;
+            position:absolute;
+            left: 10%;
+            
+            font-size: 130%;
+            width: 80%;
+            display: none;
+            
+        }
+        #books{
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 300%;
+            display: none;
+            text-align: center;
+
+        }
+        
+        #quote{
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 300%;
+            width: 100%;
+            text-align: center;
+            display: none;
+            
+        }
+        #Newton{
+            color: red;
+        }
+        #enter{
+            box-sizing: content-box;
+            font-family: 'Raleway', sans-serif;
+            border-color: red;
+            font-size: 120%;
+            width: 15%;
+            border-radius: 40px;
+            background-color: white;
+            color: red;
+            position: absolute;
+            left: 42%;
+            display: none;
+        }
+        
+        #enter:hover{
+            color:white;
+            background-color: red;
+            border-color: black;
+            -webkit-transition: background-color 0.7s ease;
+            -moz-transition: background-color 0.7s ease;
+            -o-transition: background-color 0.7s ease;
+            transition: background-color 0.7s ease;
+            -webkit-transition: color 0.3s ease;
+            -moz-transition: color 0.3s ease;
+            -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            -webkit-transition: border-color 0.7s ease;
+            -moz-transition: border-color 0.7s ease;
+            -o-transition: border-color 0.7s ease;
+            transition: border-color 0.7s ease;
+        }
+        #Books:hover{
+            color:white;
+            background-color: red;
+            border-color: black;
+            -webkit-transition: background-color 0.7s ease;
+            -moz-transition: background-color 0.7s ease;
+            -o-transition: background-color 0.7s ease;
+            transition: background-color 0.7s ease;
+            -webkit-transition: color 0.3s ease;
+            -moz-transition: color 0.3s ease;
+            -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            -webkit-transition: border-color 0.7s ease;
+            -moz-transition: border-color 0.7s ease;
+            -o-transition: border-color 0.7s ease;
+            transition: border-color 0.7s ease;
+        }
+        #about-me{
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 300%;
+            display: none;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        
+        
+        
+        $(document).ready(function(){
+            $('#quote').fadeIn(2000);
+            $('#enter').fadeIn(2000);
+            $("#enter").click(function(){
+                $("#quote").slideUp(1000,'linear');
+                $("#enter").fadeOut(1000);
+                $("#about-me").delay(1000).fadeIn(2000);
+                $("#description").delay(1000).fadeIn(2000);
+                $("#connect").delay(1500).fadeIn(2000);
+                $('#Books').delay(2000).fadeIn(2000);
+                $('#About').delay(2500).fadeIn(2000);
+                $('#Blog').delay(3000).fadeIn(2000);
+            });
+            $('#connect').click(function(){
+                $('#about-me').slideUp(1000,'linear');
+                $("#blog").slideUp(1000, 'linear');
+                $('#books').slideUp(1000, 'linear');
+                $('#description').fadeOut(1000);
+                $('#connectw').delay(1200).fadeIn(1000);
+            });
+            $('#About').click(function(){
+                $('#connectw').slideUp(1000,'linear');
+                $('#blog').slideUp(1000,'linear');
+                $('#books').slideUp(1000, 'linear');
+                $('#about-me').delay(1000).fadeIn(2000);
+                $('#description').delay(1000).fadeIn(2000);
+            });
+            $('#Blog').click(function(){
+               $('#connectw').slideUp(1000,'linear');
+               $('#about-me').slideUp(1000,'linear');
+               $('#description').fadeOut(1000);
+                $('#books').slideUp(1000, 'linear');
+                $('#blog').delay(1200).fadeIn(2000);
+            });
+            $('#Blog').click(function(){
+                $(this).hide("slide",{direction: 'right', distance: 200}, 1000);
+            });
+            $('#Books').click(function(){
+                $('#connectw').slideUp(1000,'linear');
+                $('#about-me').slideUp(1000,'linear');
+                $('#description').fadeOut(1000);
+                $('#blog').slideUp(1000,'linear');
+                $('#books').delay(1200).fadeIn(2000);
+            });
+            
+        });
+    
+    
+    </script>
+    
+</html>

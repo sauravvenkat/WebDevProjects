@@ -1,0 +1,131 @@
+        
+#whole-menu{
+    
+    position:fixed;
+}
+
+        .links a{
+            text-decoration: none;
+            position:relative;
+            display: none;
+            font-family: sans-serif;
+            color: white;
+            background-color: dimgray;
+            padding: 20px;
+            width: 110px;
+            
+        }
+        .links a:hover{
+            background-color: red;
+        }
+        
+        
+        #menu .dropbtn{
+            
+            background-color: dimgray;
+            color: white;
+            font-family: sans-serif;
+            font-size: 18px;
+            width: 150px;
+            border-color: dodgerblue;
+        }
+        
+        
+        
+        #menu .dropbtn:hover{
+            background-color: red;
+            border-color: purple;
+            color: black;
+            display: block;
+            
+        }
+        
+        
+        
+        
+        #menu:hover .links a{
+            display: block
+        }
+        
+        #menu2 .dropbtn2{
+            
+            background-color: blue;
+            color: white;
+            font-family: sans-serif;
+            font-size: 18px;
+            width: 150px;
+            border-color: red;
+            position: absolute;
+            left: 157px;
+            top: 8px;
+        }
+        
+        #menu2 .dropbtn2:hover{
+            background-color: red;
+            border-color: purple;
+            color: black;
+            display: block;
+        }
+        
+        .links2 a{
+            text-decoration: none;
+            position:relative;
+            display: none;
+            font-family: sans-serif;
+            color: white;
+            background-color: dimgray;
+            padding: 20px;
+            width: 110px;
+            position: relative;
+            left: 150px;
+        }
+        
+        .links2 a:hover{
+            background-color: red;
+        }
+        
+        #menu2:hover .links2 a{
+            display: block;
+        }
+
+        #menu3 .dropbtn3{
+            
+            background-color: blue;
+            color: white;
+            font-family: sans-serif;
+            font-size: 18px;
+            width: 150px;
+            border-color: red;
+            position: absolute;
+            left: 157px;
+            top: 8px;
+        }
+        
+        #menu3 .dropbtn3:hover{
+            background-color: red;
+            border-color: purple;
+            color: black;
+            display: block;
+        }
+        
+        .links3 a{
+            text-decoration: none;
+            position:relative;
+            display: none;
+            font-family: sans-serif;
+            color: white;
+            background-color: dimgray;
+            padding: 20px;
+            width: 110px;
+            position: relative;
+            left: 150px;
+        }
+        
+        .links3 a:hover{
+            background-color: red;
+        }
+        
+        #menu3:hover .links3 a{
+            display: block;
+        }
+        

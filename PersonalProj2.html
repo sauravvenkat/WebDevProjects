@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>     
+    <h1 id="title">Welcome to Orbitron</h1>
+    <button id="return">Return to Main Menu</button>
+    <button id="onep">One Player</button>
+    <button id="twop">Two Player</button>
+    <button id="score">Score</button>
+    <button id="options">Options</button>
+    <button id="credits">Credits</button>
+    <button id="about">About</button>
+</body>
+<!--3636120323.1677ed0.945db10d714545b2be99672922f72897-->
+    
+<style>
+    
+    #onep{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 150%;
+        padding: 2%;
+        width: 17%;
+        background-color: black;
+        border-color: #66ff33;
+        position: absolute;
+        left:33%;
+        top: 35%;
+        color: #66ff33;
+    }
+    
+    #onep:hover{
+        background-color: #66ff33;
+        border-color: grey;
+        color: black;
+    }
+    
+    #twop{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 150%;
+        padding: 2%;
+        width: 17%;
+        background-color: black;
+        border-color: #66ff33;
+        position: absolute;
+        left: 33%;
+        top:48%;
+        color: #66ff33;
+    }
+    #twop:hover{
+        background-color: #66ff33;
+        border-color: grey;
+        color: black;
+    }
+    #score{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 150%;
+        padding: 2%;
+        width: 17%;
+        background-color: black;
+        border-color: #66ff33;
+        position:absolute;
+        left:33%;
+        top:61%;
+        color: #66ff33;
+
+    }
+    #score:hover{
+        background-color: #66ff33;
+        border-color: grey;
+        color: black;
+    }
+    #options{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 150%;
+        padding: 2%;
+        width: 17%;
+        text-align: center;
+        background-color: black;
+        border-color: #66ff33;
+        position:absolute;
+        left:52%;
+        top: 35%;
+        color: #66ff33;
+    }
+    #options:hover{
+        background-color: #66ff33;
+        border-color: grey;
+        color: black;
+    }
+    #return{
+       font-family: 'Orbitron', sans-serif;
+        font-size: 150%;
+        padding: 2%;
+        width: 17%;
+        background-color: black;
+        border-color: #66ff33;
+        color: #66ff33;
+        position:absolute;
+        left: 75%;
+        top: 10%;
+        display:none;
+    }
+    #return:hover{
+        background-color: #66ff33;
+        border-color: grey;
+        color: black;
+        
+    }
+    #credits{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 150%;
+        padding: 2%;
+        width: 17%;
+        background-color: black;
+        border-color: #66ff33;
+        position:absolute;
+        left:52%;
+        top:48%;
+        color: #66ff33;
+    }
+    #credits:hover{
+        background-color: #66ff33;
+        border-color: grey;
+        color: black;
+    }
+    #about{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 150%;
+        padding: 2%;
+        width: 17%;
+        background-color: black;
+        border-color: #66ff33;
+        position: absolute;
+        left:52%;
+        top:61%;
+        color: #66ff33;
+    }
+    #about:hover{
+        background-color: #66ff33;
+        border-color: grey;
+        color: black;
+    }
+    body{
+        background: black;
+    }
+    #title{
+        color:#66ff33;
+        font-family: 'Orbitron', sans-serif;
+        position: absolute;
+        top: 7%;
+        font-size: 270%;
+        width: 75%;
+    }
+
+    
+    
+    
+    
+    
+</style>
+    
+<script>
+    $(document).ready(function(){
+        $('#onep').click(function(){
+                $(this).hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#twop').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#score').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#options').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#credits').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#about').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#return').fadeIn(1500);
+            });
+        $('#twop').click(function(){
+                $(this).hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#onep').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#score').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#options').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#credits').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#about').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#return').fadeIn(1500);
+            });
+        $('#score').click(function(){
+                $(this).hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#onep').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#twop').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#options').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#credits').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#about').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#return').fadeIn(1500);
+            });
+        $('#options').click(function(){
+                $(this).hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#onep').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#score').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#twop').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#credits').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#about').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#return').fadeIn(1500);
+            });
+        $('#credits').click(function(){
+                $(this).hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#onep').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#score').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#options').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#twop').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#about').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#return').fadeIn(1500);
+            });
+        $('#about').click(function(){
+                $(this).hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#onep').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#score').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#options').hide("slide",{direction: 'left', distance: 500}, 1000);
+                $('#credits').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#twop').hide("slide",{direction: 'right', distance: 500}, 1000);
+                $('#return').fadeIn(1500);
+            });
+        $('#return').click(function(){
+                $(this).fadeOut(1000);
+                $('#onep').fadeIn(1500);
+                $('#score').fadeIn(1500);
+                $('#twop').fadeIn(1500);
+                $('#options').fadeIn(1500);
+                $('#options').fadeIn(1500);
+                $('#about').fadeIn(1500);
+                $('#credits').fadeIn(1500);
+                
+        });
+    
+    });
+</script>
+</html>

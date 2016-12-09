@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>D3 Tutorial 2</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    
+</head>
+
+<body>
+    <button id="head" onclick = 'orangeMove()' >COLORS COLORS</button>
+    
+    <button id="head2" onclick = 'orangeMove2()'>COLORS COLORS</button>
+    
+    
+    
+    <script>
+        
+        
+        var orangeData = [29,38,40,50,60,70,80,90,100];
+
+        var head = document.getElementById('head')
+        
+        var domainMax = Math.max.apply(Math, orangeData);
+        
+        var canvas = d3.select('body')
+            .append('svg')
+            .attr('width', 1000)
+            .attr('height', 1024);
+        
+        var color = d3.scale.linear()
+            .domain([0, domainMax])
+            .range(['orange','blue']);
+        
+        var color2 = d3.scale.linear()
+            .domain([0, domainMax])
+            .range(['#00ff00','#cc00cc']);
+        
+        var color3 = d3.scale.linear()
+            .domain([0, domainMax])
+            .range(['#ff0066', '#0033cc']);
+        
+        var oranges = canvas.selectAll('circle')
+            .data(orangeData)
+            .enter()
+            .append('circle')
+            .attr('fill', function(d) {return color2(d)})
+            .attr('cx', function(d, i){return (d + i*100)})
+            .attr('cy', function(d){return d+100 })
+            .attr('r', function(d){return d });
+        
+        function orangeMove() {
+            oranges.transition()
+                .duration(1500)
+                .attr('cy', function(d){return d+ 500})
+                .duration(1500)
+                .attr('fill', function(d) {return color(d)});
+        }
+        
+        function orangeMove2() {
+            oranges.transition()
+                .duration(1500)
+                .attr('cy', function(d){return d + 100})
+                .duration(1500)
+                .attr('fill', function(d) {return color3(d)});
+            
+        }
+        
+//        oranges.transition()
+//            .duration(2000)
+//            .attr('cy', function(d) {return d + 100})
+//            .attr('fill', function(d) {return color3(d)})
+        
+    
+    </script>
+    
+    <style>
+        
+        body{
+            
+            background-color: black;
+        }
+        
+        #head{
+            font-family: Impact, Charcoal, sans-serif;
+            font-size: 36px;
+            color: red;
+            background-color: black;
+            border-color: black;
+            position:absolute;
+            top: 10px;
+            left: 10px;
+        }
+        
+        #head2{
+            font-family: Impact, Charcoal, sans-serif;
+            font-size: 36px;
+            color: blue;
+            background-color: black;
+            border-color: black;
+            position:absolute;
+            top: 10px;
+            left: 300px;
+        }
+        
+    
+    
+    </style>
+    
+    
+    
+</body>
+
+
+
+
+
+
+</html>

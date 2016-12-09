@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.1.0.min.js"></script>    
+</head>    
+<body>
+
+
+<div id="slider">Some content or other.</div>    
+    
+<script>
+$(document).ready(
+        $('#slider').click(
+            function(){
+                $(this).hide('slide',{direction:'right'},1000);
+                    
+    });
+    );
+    
+</script>
+
+<style>
+    #slider {
+        width: 50%;
+        height: 3em;
+        border: 3px solid #f90;
+        color: #000;
+        background-color: #fff;
+        text-align: center;
+</style>
+
+</body>
+</html>
+
+
+        
