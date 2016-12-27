@@ -1,0 +1,235 @@
+<html>
+<head>
+    <script src='TicTacToe.js'></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <button id='btn' class='arc' onclick='changeColor()'>  </button>
+    <button id='btn1' class='arc' onclick='changeColor1()'>  </button>
+    <button id='btn2' class='arc' onclick='changeColor2()'>  </button>
+    <button id='btn3' class='arc' onclick='changeColor3()'>  </button>
+    <button id='btn4' class='arc' onclick='changeColor4()'>  </button>
+    <button id='btn5' class='arc' onclick='changeColor5()'>  </button>
+    <button id='btn6' class='arc' onclick='changeColor6()'>  </button>
+    <button id='btn7' class='arc' onclick='changeColor7()'>  </button>
+    <button id='btn8' class='arc' onclick='changeColor8()'>  </button>
+    
+</body>
+<script>
+//    function get(id){
+//       return document.getElementById(id);
+//    }
+//    count = 0
+//    
+//    function changeColor(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn').style.backgroundColor = 'red'
+//        }
+//        else{
+//            get('btn').style.backgroundColor = 'blue'
+//        }
+//        get('btn').disabled = 'true';
+//        get('btn').style.cursor = 'none';
+//        console.log(count)
+//        
+//    }
+//    
+//    function changeColor1(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn1').style.backgroundColor = 'red';
+//        }
+//        else{
+//            get('btn1').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn1').disabled = 'true';
+//        document.getElementById('btn1').style.cursor = 'none';
+//        console.log(count)
+//    }
+//    
+//    function changeColor2(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn2').style.backgroundColor = 'red';
+//        }
+//        else{
+//            get('btn2').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn2').disabled = 'true';
+//        document.getElementById('btn2').style.cursor = 'none';
+//        console.log(count)
+//    }
+//    
+//     function changeColor3(){
+//        count += 1 
+//        if (count % 2 == 1){
+//            get('btn3').style.backgroundColor = 'red'
+//        }
+//        else{
+//            get('btn3').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn3').disabled = 'true';
+//        document.getElementById('btn3').style.cursor = 'none';
+//        console.log(count) 
+//    }
+//    function changeColor4(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn4').style.backgroundColor = 'red'
+//        }
+//        else{
+//            get('btn4').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn4').disabled = 'true';
+//        document.getElementById('btn4').style.cursor = 'none';
+//        console.log(count)
+//    }
+//    function changeColor5(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn5').style.backgroundColor = 'red'
+//        }
+//        else{
+//            get('btn5').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn5').disabled = 'true';
+//        document.getElementById('btn5').style.cursor = 'none';
+//        console.log(count)
+//    }
+//    function changeColor6(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn6').style.backgroundColor = 'red'
+//        }
+//        else{
+//            get('btn6').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn6').disabled = 'true';
+//        document.getElementById('btn6').style.cursor = 'none';
+//        console.log(count)
+//    }
+//    function changeColor7(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn7').style.backgroundColor = 'red'
+//        }
+//        else{
+//            get('btn7').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn7').disabled = 'true';
+//        document.getElementById('btn7').style.cursor = 'none';
+//        console.log(count)
+//    }
+//    function changeColor8(){
+//        count += 1
+//        if (count % 2 == 1){
+//            get('btn8').style.backgroundColor = 'red'
+//        }
+//        else{
+//            get('btn8').style.backgroundColor = 'blue'
+//        }
+//        document.getElementById('btn8').disabled = 'true';
+//        document.getElementById('btn8').style.cursor = 'none';
+//        console.log(count)
+//    }
+    
+    
+
+        
+        
+</script>
+<style> 
+    #btn{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:200px;
+        top: 100px;
+    }
+    #btn1{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:310px;
+        top: 100px;
+    }
+    #btn2{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:420px;
+        top: 100px;
+    }
+    #btn3{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:200px;
+        top: 210px;
+    }
+    #btn4{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:310px;
+        top: 210px;
+        
+    }
+    #btn5{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:420px;
+        top: 210px;
+    }
+    #btn6{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:200px;
+        top: 320px;
+    }
+    #btn7{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:310px;
+        top: 320px;
+    }
+    #btn8{
+        background-color: #A69B9B;
+        height: 100px;
+        width: 100px;
+        border: none;
+        position:absolute;
+        left:420px;
+        top: 320px;
+    }
+    
+
+    .arc:hover{
+        box-shadow: 7px 7px rgba(220, 206, 201, 0.8);
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+    }
+    
+    
+</style>
+</html>
