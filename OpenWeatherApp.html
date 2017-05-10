@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+
+<!-- <a class="waves-effect waves-light btn" id='btn'>button</a> -->
+ <input type="text" id='city' name="city" value="" placeholder="Enter City of Choice" style='padding: 10px; width:50%'>
+ <div style='width:50%;height:50%;padding:10px' class="card">
+    <div class="card-content">
+      <h4></h4>
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a class="active" href="#test4">Temperature</a></li>
+        <li class="tab"><a href="#test5">Sky</a></li>
+        <li class="tab"><a href="#test6">Visibility</a></li>
+        <li class="tab"><a href="#test7">Wind</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+      <div id="test4"></div>
+      <div id="test5"></div>
+      <div id="test6"></div>
+      <div id='test7'></div>
+    </div>
+</div>
+</body>
+<style type="text/css" media="screen">
+	#btn{
+		position: relative;
+		top: 100px;
+	}
+	#dropme{
+		position: relative;
+		top: 100px;
+	}
+	
+</style>
+
+<script>
+	$(document).ready(function() {
+		function doSomething(){
+			$.ajax({
+				url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $('#city').val() +'&appid=0e776e3cf38fae4ad0f8b21e795d6b55',
+				type: 'GET',
+				dataType: 'json',
+				async: false,
+				success: function(json){
+					$('h4').text(json['name']+', '+json['sys']['country']+ ' Weather')
+					$('#test4').text('Current Temperature: '+ Math.floor(json['main']['temp']-273.15) + ' C')
+					$('#test5').text(json['weather'][0]['main']+': '+ json['weather'][0]['description'] )
+					$('#test6').text('Visibility: '+json['visibility']+' meters')
+					$('#test7').text('Wind Speed: '+ json['wind']['speed']+'mph' )
+
+				}
+			})
+		}
+		$('#city').change(function(){
+			doSomething()
+		})
+
+		
+	});
+</script>
+</html>
